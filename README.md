@@ -38,12 +38,12 @@ ex:
     ]
   }
 ```
-The delivery means the available delivery method ids for this showing. 
-And the fee includes the fees for this showing. If the amount property doesn't exist, the amount from Fees data will be used.
+The "delivery" property refers to the available delivery methods for a particular showing, while the "fee" refers to the associated fees for that showing.If the "amount" property is not present, the "Fees" will be used to determine the amount.
 
-I used `Redux` to share the data and status between components(`src/app/store.ts, ticketSlice.ts, hooks.ts`) as well as showAlert(`src/app/alertSlice.ts`).
+In order to share data and status between components, I utilized `Redux`.
+The relevant files are "store.ts", "ticketSlice.ts", "hooks.ts", and "alertSlice.ts".
 
-The store includes the showings, cart, selected delivery method and payment method, saved payment methods and the orders.
+The "store" includes the showings, cart, selected delivery method and payment method, saved payment methods and the orders.
 
 Showings includes the available showing data and when the user make an order, the inventory will be reduced.
 
@@ -53,9 +53,6 @@ Payments includes the payment methods that the user saved.
 
 Orders include the order details that the user placed.
 
-All data will be reseted when refreshing browser because it is not linked to any backend system.
+It's important to note that all data is reset when the browser is refreshed because there is no connection to a backend system.
 
-MUI is used and this is fully responsible.
-
-
-
+To design the user interface, I used MUI, which is fully responsible for the design aspect.
